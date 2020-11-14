@@ -7,7 +7,7 @@ before_install:
 script:
   - docker run harisht847/react-test npm test 
 
-after_success:
+after_script:
   - docker build -t harisht847/multi-client ./client
   - docker build -t harisht847/multi-ngnix ./nginx
   - docker build -t harisht847/multi-server ./server
