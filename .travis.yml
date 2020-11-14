@@ -4,7 +4,7 @@ services:
 before_install:
   -  docker build -t harisht847/react-test -f ./client/Dockerfile.dev ./client  
 
-after_install:
+script:
   - docker build -t harisht847/multi-client ./client
   - docker build -t harisht847/multi-ngnix ./nginx
   - docker build -t harisht847/multi-server ./server
